@@ -1,4 +1,6 @@
 ---
+import About from "../components/sections/About.astro";
+import Education from "../components/sections/Education.astro";
 import ExperienceSection from "../components/sections/ExperienceSection.astro";
 import Hero from "../components/sections/Hero.astro";
 import ProjectSection from "../components/sections/ProjectSection.astro";
@@ -11,10 +13,8 @@ import Layout from "../layouts/Layout.astro";
   <Header />
   <Hero />
   <ProjectSection />
-  <SkillsSection />
   <ExperienceSection />
-  <section class="about mt-12">
-    <h2 class="text-2xl font-bold">Sobre Mí</h2>
-    <p class="mt-4">Información personal relevante y habilidades.</p>
-  </section>
+  <SkillsSection />
+  <About />
+  <Education />
 </Layout>
