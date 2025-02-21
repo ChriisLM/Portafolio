@@ -48,7 +48,6 @@ export function FileDown(props: IconProps) {
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
-      className="icon icon-tabler icons-tabler-outline icon-tabler-file-download"
       {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" />
@@ -59,7 +58,7 @@ export function FileDown(props: IconProps) {
   );
 }
 
-export function ProjectsIcon(props: IconProps) {
+export function ExperienceIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -71,12 +70,31 @@ export function ProjectsIcon(props: IconProps) {
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
-      className="icon icon-tabler icons-tabler-outline icon-tabler-briefcase"
       {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" />
       <path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M12 12v.01" />
       <path d="M3 13a20 20 0 0 0 18 0" />
+    </svg>
+  );
+}
+
+export function ProjectsIcon(props: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#fff"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1m3 0v18M13 8h2M13 12h2" />
     </svg>
   );
 }
@@ -93,11 +111,92 @@ export function ExternalLinkIcon(props: IconProps) {
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
-      className="icon icon-tabler icons-tabler-outline icon-tabler-external-link"
       {...props}
     >
       <path stroke="none" d="M0 0h24v24H0z" />
       <path d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6M11 13l9-9M15 4h5v5" />
+    </svg>
+  );
+}
+
+export function CheckIcon(props: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="m5 12 5 5L20 7" />
+    </svg>
+  );
+}
+
+export function AboutIcon(props: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#fff"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="M6 6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2zM12 2v2M9 12v9M15 12v9M5 16l4-2M15 14l4 2M9 18h6M10 8v.01M14 8v.01" />
+    </svg>
+  );
+}
+
+export function EducationIcon(props: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#fff"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="M22 9 12 5 2 9l10 4 10-4v6" />
+      <path d="M6 10.6V16a6 3 0 0 0 12 0v-5.4" />
+    </svg>
+  );
+}
+
+export function SkillsIcon(props: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      {...props}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <path d="M5 6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z" />
+      <path d="M9 9h6v6H9zM3 10h2M3 14h2M10 3v2M14 3v2M21 10h-2M21 14h-2M14 21v-2M10 21v-2" />
     </svg>
   );
 }
