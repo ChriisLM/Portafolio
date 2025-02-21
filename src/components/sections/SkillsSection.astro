@@ -1,0 +1,63 @@
+---
+import { Github, SkillsIcon } from "../../icons";
+import {
+  AstroIcon,
+  CssIcon,
+  FigmaIcon,
+  GitIcon,
+  JavaScriptIcon,
+  JestIcon,
+  MysqlIcon,
+  NodeJSIcon,
+  PythonIcon,
+  ReactIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+} from "../../icons/TechnologiesIcons";
+
+const technologies = [
+  { name: "TypeScript", icon: TypeScriptIcon },
+  { name: "JavaScript", icon: JavaScriptIcon },
+  { name: "React", icon: ReactIcon },
+  { name: "CSS", icon: CssIcon },
+  { name: "Tailwind CSS", icon: TailwindIcon },
+  { name: "Astro", icon: AstroIcon },
+  { name: "Git", icon: GitIcon },
+  { name: "GitHub", icon: Github },
+  { name: "Node.js", icon: NodeJSIcon },
+  { name: "MySQL", icon: MysqlIcon },
+  { name: "Python", icon: PythonIcon },
+  { name: "Figma", icon: FigmaIcon },
+  { name: "Jest", icon: JestIcon },
+  { name: "Zustand", icon: null, imgSrc: "../../icons/zustandIcon.svg" },
+];
+---
+
+<section
+  id="tecnologias"
+  class="py-16 text-white text-left w-full px-4 sm:px-8 md:px-16 lg:px-24"
+>
+  <div class="mx-auto">
+    <div class="flex space-x-4 items-end mb-12">
+      <SkillsIcon className="h-8 w-8" />
+      <h2 class="text-4xl text-white font-bold">Tecnologías que manejo</h2>
+    </div>
+
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8"
+    >
+      {
+        technologies.map((tech, index) => (
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110">
+            {tech.icon ? (
+              <tech.icon className="h-12 w-12 mb-2" />
+            ) : (
+              <img src={tech.imgSrc} alt={tech.name} class="h-12 w-12 mb-2" />
+            )}
+            <p class="text-sm text-gray-300 font-semibold">{tech.name}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
