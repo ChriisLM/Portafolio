@@ -1,0 +1,71 @@
+---
+import { AboutIcon } from "../../icons";
+---
+
+<section
+  id="sobre-mi"
+  class="text-left w-full px-4 sm:px-8 md:px-16 lg:px-24 mx-auto my-8 sm:my-16"
+>
+  <div class="mx-auto">
+    <div class="flex space-x-4 items-end mb-8">
+      <AboutIcon className="h-8 w-8" />
+      <h2 class="text-4xl text-white font-bold">Sobre Mí</h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 text-gray-300">
+      <p class="leading-relaxed">
+        Soy un <strong>desarrollador frontend</strong> con más de 5 años inmerso
+        en el mundo de la programación. Desde mis primeros pasos en el código, descubrí
+        una fascinación por crear experiencias digitales que no solo sean funcionales,
+        sino también intuitivas y visualmente impactantes. Mi curiosidad y dedicación
+        me han llevado a explorar y aprender las tecnologías más modernas, siempre
+        con el objetivo de ofrecer soluciones innovadoras y de alta calidad.
+      </p>
+
+      <p class="leading-relaxed">
+        En los últimos 2 años, he enfocado mi carrera en el desarrollo frontend,
+        especializándome en tecnologías como <strong>JavaScript</strong>, <strong
+          >React.js</strong
+        >, <strong>TypeScript</strong> y <strong>Tailwind CSS</strong>. He
+        trabajado en la creación de aplicaciones web dinámicas y responsivas,
+        diseñadas para ofrecer una experiencia de usuario fluida y atractiva en
+        cualquier dispositivo.
+      </p>
+
+      <p class="leading-relaxed">
+        Mi enfoque no solo está en escribir código, sino en <strong
+          >resolver problemas</strong
+        > y <strong>mejorar la experiencia del usuario</strong>. Me esfuerzo en
+        seguir las mejores prácticas de desarrollo, como la creación de
+        componentes reutilizables, la organización modular del código y el uso
+        de herramientas como Git para un control de versiones eficiente. Siempre
+        estoy buscando nuevos desafíos que me permitan seguir creciendo como
+        profesional y aportar valor a cada proyecto en el que participo.
+      </p>
+
+      <div class="mt-4">
+        <h3 class="text-xl text-white font-semibold mb-3">
+          Habilidades Blandas:
+        </h3>
+        <div class="flex flex-wrap gap-3">
+          {
+            [
+              "Atención al detalle",
+              "Trabajo en equipo",
+              "Organización",
+              "Iniciativa",
+              "Adaptabilidad",
+              "Comunicación efectiva",
+              "Resolución de problemas",
+              "Aprendizaje continuo",
+            ].map((skill) => (
+              <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-sm">
+                {skill}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
