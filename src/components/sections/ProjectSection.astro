@@ -1,17 +1,29 @@
 ---
 import { ProjectsIcon } from "../../icons";
-import projects from "../../data/projectsDB.json"
+import projects from "../../data/projectsDB.json";
 import ProjectCard from "../ui/ProjectCard.astro";
 ---
 
-<section id="proyectos" class="text-left w-full px-24 mx-auto my-16 mt-28">
+<section
+  id="proyectos"
+  class="text-left w-full px-4 sm:px-8 md:px-16 lg:px-24 mx-auto my-16 mt-28"
+>
   <div class="flex space-x-4 items-end mb-12">
     <ProjectsIcon className="h-8 w-8" />
     <h2 class="text-4xl text-white font-bold">Proyectos</h2>
   </div>
   <div class="flex flex-col space-y-6">
-    {projects.map((project, index) => (
-      <ProjectCard key={index} project={project} />
-    ))}
+    {
+      projects
+        .slice(0, 3)
+        .map((project, index) => <ProjectCard key={index} project={project} />)
+    }
+  </div>
+  <div class="flex justify-center my-8">
+    <button
+      class="text-white font-extrabold px-5 py-1.5 rounded-md bg-blue-500/20 border border-blue-500 hover:bg-blue-600/60 hover:border-transparent cursor-pointer transition-colors duration-300"
+    >
+      <a href="/projects">Ver más</a>
+    </button>
   </div>
 </section>
