@@ -1,0 +1,82 @@
+---
+import { ExternalLinkIcon, Github } from "../../icons";
+import {
+  AstroIcon,
+  CssIcon,
+  FigmaIcon,
+  JavaScriptIcon,
+  JestIcon,
+  MysqlIcon,
+  NodeJSIcon,
+  PythonIcon,
+  ReactIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+} from "../../icons/TechnologiesIcons";
+
+const { project } = Astro.props as {
+  project: {
+    title: string;
+    description: string;
+    image: string;
+    link: string;
+    github: string;
+    technologies: string[];
+  };
+};
+
+export const techIcons: Record<string, any> = {
+  React: ReactIcon,
+  Tailwind: TailwindIcon,
+  Typescript: TypeScriptIcon,
+  Javascript: JavaScriptIcon,
+  Mysql: MysqlIcon,
+  NodeJS: NodeJSIcon,
+  Figma: FigmaIcon,
+  Python: PythonIcon,
+  Css: CssIcon,
+  Astro: AstroIcon,
+  Jest: JestIcon,
+};
+---
+
+<article class="flex rounded-lg overflow-hidden">
+  <div class="h-72 w-3/5 bg-white rounded-e-lg overflow-hidden">
+    <img
+      src={project.image}
+      alt={project.title}
+      class="w-full h-full object-cover"
+      loading="lazy"
+    />
+  </div>
+  <div class="h-72 w-2/5 flex flex-col justify-between ml-6 p-6 text-white">
+    <h3 class="text-2xl font-bold">{project.title}</h3>
+    <p class="mt-2 text-gray-300">{project.description}</p>
+    <div class="flex space-x-5 mt-2">
+      {
+        project.technologies.map((tech) => {
+          const Icon = techIcons[tech];
+          return Icon ? <Icon className="h-8 w-8" alt={tech} /> : null;
+        })
+      }
+    </div>
+    <div class="mt-4 space-x-4 flex">
+      <a
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition"
+      >
+        Código <Github className="h-5 w-5 ml-2" />
+      </a>
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center bg-yellow-400 hover:bg-yellow-300 text-black font-medium px-4 py-2 rounded-lg transition"
+      >
+        Ver Proyecto <ExternalLinkIcon className="h-5 w-5 ml-2" />
+      </a>
+    </div>
+  </div>
+</article>
