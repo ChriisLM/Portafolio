@@ -1,0 +1,22 @@
+---
+import { Github } from "../../icons";
+import Button from "./Button.astro";
+---
+
+<footer class="shadow mt-6">
+  <div class="mx-auto px-4 py-6 text-center text-white flex justify-around">
+    <p>
+      <span>Hecho por <strong class="text-yellow-300">@ChriisLM</strong></span>
+      <span>2025</span>
+    </p>
+    <p class="flex space-x-2 items-center">
+      <span>Sobre este sitio</span><span
+        ><Button link="https://github.com/ChriisLM/Portafolio">
+          <Github
+            className="h-5 w-5 hover:text-blue-500 transition-colors duration-300 cursor-pointer"
+          />
+        </Button></span
+      >
+    </p>
+  </div>
+</footer>
