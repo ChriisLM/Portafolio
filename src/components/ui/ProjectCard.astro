@@ -56,7 +56,32 @@ export const techIcons: Record<string, any> = {
       {
         project.technologies.map((tech) => {
           const Icon = techIcons[tech];
-          return Icon ? <Icon className="h-8 w-8" alt={tech} /> : null;
+
+          if (!Icon) {
+            if (!Icon) {
+              if (tech === "Docusaurus") {
+                return (
+                  <img
+                    src="/icons/Docusaurus.svg"
+                    alt="Docusaurus"
+                    class="h-8 w-8 hover:-translate-y-1 transition-all duration-300"
+                  />
+                );
+              }
+              if (tech === "Zustand") {
+                return (
+                  <img
+                    src="/icons/zustandIcon.svg"
+                    alt="Zustand"
+                    class="h-8 w-8 hover:-translate-y-1 transition-all duration-300"
+                  />
+                );
+              }
+              return null;
+            }
+          }
+
+          return <Icon className="h-8 w-8 hover:-translate-y-1 transition-all duration-300" alt={tech} />;
         })
       }
     </div>
