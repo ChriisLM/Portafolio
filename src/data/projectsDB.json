@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Essential Materials",
+    "description": "Libreria de componentes hecha en typescript, react y css, disponible en npm.",
+    "image": "/img/proyect1.webp",
+    "link": "https://essential-materials.netlify.app/",
+    "github": "https://github.com/ChriisLM/Essential-Materials",
+    "technologies": [
+      "Typescript",
+      "React",
+      "Css",
+      "Docusaurus",
+      "Figma"
+    ]
+  },
+  {
+    "title": "Money Mentory",
+    "description": "Aplicacion de finanzas personales.",
+    "image": "/img/proyect2.webp",
+    "link": "https://moneymentory.netlify.app/",
+    "github": "https://github.com/ChriisLM/MoneyMentor",
+    "technologies": [
+      "Typescript",
+      "React",
+      "Tailwind",
+      "Zustand",
+      "Mysql"
+    ]
+  }
+]
