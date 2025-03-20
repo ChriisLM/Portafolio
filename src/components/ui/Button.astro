@@ -1,10 +1,10 @@
 ---
-const { link, background } = Astro.props;
+const { link, background, download } = Astro.props;
 ---
 
 {
   background ? (
-    <a href={link} class="flex space-x-2 items-center px-2 py-1 pr-3 font-semibold rounded-md bg-blue-500 hover:bg-blue-600 cursor-pointer transition-colors duration-300">
+    <a href={link} download={download} class="flex space-x-2 items-center px-2 py-1 pr-3 font-semibold rounded-md bg-blue-500 hover:bg-blue-600 cursor-pointer transition-colors duration-300">
       <slot />
     </a>
   ) : (
